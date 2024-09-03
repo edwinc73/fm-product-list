@@ -11,7 +11,7 @@ function App() {
   const { confirmOrder } = useContext(CartContext);
   return (
     <>
-      <main className="min-w-screen min-h-screen bg-Rose-50 relative md:max-w-7xl md:mx-auto md:mt-6 md:flex">
+      <main className="min-w-screen  bg-Rose-50 relative md:max-w-7xl md:mx-auto md:mt-6 md:flex">
         <Menu />
         <Cart />
         <AnimatePresence>

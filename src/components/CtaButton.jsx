@@ -19,7 +19,7 @@ export const CtaButton = ({ setConfirmOrder, children, type }) => {
   };
   return (
     <button
-      className="w-full bg-red text-white font-medium flex justify-center items-center px-6 py-3 rounded-full border border-rose-950 border-opacity-50 h-12"
+      className="w-full bg-red text-white font-medium flex justify-center items-center px-6 py-3 rounded-full h-12 hover:brightness-90 transition-all duration-100 ease-in-out"
       onClick={handleClick}
     >
       {isLoading ? (

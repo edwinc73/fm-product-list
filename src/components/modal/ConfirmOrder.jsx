@@ -11,7 +11,7 @@ const ConfirmOrder = () => {
     <BgScreen setShow={setConfirmOrder}>
       <dialog
         open={confirmOrder}
-        className="fixed left-1/2 bottom-0 -translate-x-1/2 w-full bg-white px-6 py-10 rounded-t-2xl font-red-hat"
+        className="fixed right-1/2 bottom-0 translate-x-1/2 md:bottom-1/2 md:translate-y-1/2 w-full md:max-w-xl bg-white px-6 py-10 rounded-t-2xl  md:rounded-b-2xl font-red-hat"
       >
         <div className="flex flex-col gap-6">
           <img src={successIcon} className="w-[3.2rem]" alt="order success" />

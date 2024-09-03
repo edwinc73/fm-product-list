@@ -23,14 +23,14 @@ export const CartItem = ({ item, dispatch, type }) => {
               {item.name}
             </div>
             <div className="flex gap-4 mt-2">
-              <span className="text-red font-bold">{item.quantity}x</span>
-              <span className=" text-Rose-900 opacity-75">
-                @ ${item.price}
+              <span className="text-red font-semibold">{item.quantity}x</span>
+              <span className=" text-Rose-500 opacity-75">
+                @ ${formatPrice(item.price)}
                 {type == "cart" ? "x" : ""}
               </span>
               {type == "cart" ? (
-                <span className="font-medium text-Rose-900 tracking-tight">
-                  ${item.quantity * item.price}
+                <span className="font-medium text-Rose-500 tracking-tight">
+                  ${formatPrice(item.quantity * item.price)}
                 </span>
               ) : null}
             </div>
@@ -38,13 +38,13 @@ export const CartItem = ({ item, dispatch, type }) => {
         </div>
         {type == "cart" ? (
           <button
-            className="border border-Rose-900 border-opacity-35 flex justify-center items-center w-5 h-5 rounded-full"
+            className="border border-Rose-900 border-opacity-35 flex justify-center items-center w-5 h-5 rounded-full hover:brightness-50 hover:rotate-90 hover:border-2 transition-all duration-100 ease-in-out"
             onClick={handleRemove}
           >
             <img src={removeIcon} className="w-3 h-3" alt="Remove Item" />
           </button>
         ) : (
-          <span className="font-medium text-[1.15rem] text-Rose-900">
+          <span className="font-medium text-[1.15rem] text-Rose-500">
             ${formatPrice(item.quantity * item.price)}
           </span>
         )}

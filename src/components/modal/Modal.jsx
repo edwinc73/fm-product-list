@@ -12,7 +12,7 @@ export const Modal = ({ action, show, setShow }) => {
         </div>
         <div className="flex justify-between w-full mt-3 text-Rose-900 font-medium">
           <button
-            className="py-1 rounded-lg"
+            className="p-1 rounded-lg opacity-50 hover:bg-gray-200 hover:opacity-75 transition-all duration-100 ease-in-out"
             onClick={() => {
               action();
               setShow(false);
@@ -21,7 +21,7 @@ export const Modal = ({ action, show, setShow }) => {
             Clear Cart
           </button>
           <button
-            className="py-1 rounded-lg "
+            className="p-1 rounded-lg text-red hover:bg-gray-200 transition-all duration-100 ease-in-out"
             onClick={() => {
               setShow(false);
             }}

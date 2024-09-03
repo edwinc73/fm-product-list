@@ -1,14 +1,16 @@
 #root,
 body,
 html {
-  min-height: 100svh;
+  padding: 0;
+  margin: 0;
   background: hsl(20, 50%, 98%);
-  min-width: 100vw;
 }
 
-.red-filter {
+.imageButton__button {
   &:hover {
-    filter: brightness(0) saturate(100%) invert(23%) sepia(91%) saturate(3872%)
-      hue-rotate(12deg) brightness(89%) contrast(88%);
+    .red-filter {
+      filter: brightness(0) saturate(100%) invert(23%) sepia(91%)
+        saturate(3872%) hue-rotate(12deg) brightness(89%) contrast(88%);
+    }
   }
 }

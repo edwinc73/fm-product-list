@@ -10,7 +10,7 @@ function Cart() {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <section className="p-6 md:w-1/3" id="cart-section">
+    <section className="p-6 md:w-1/3 md:mt-5" id="cart-section">
       <div className="p-6 min-h-72 bg-white rounded-lg flex flex-col">
         <div className="text-3xl font-bold text-red ">
           Your Cart({cart.length})
@@ -18,7 +18,8 @@ function Cart() {
             {/* no clear icon if no cart items */}
             {cart.length !== 0 && (
               <button
-                className="text-Rose-300"
+                className="text-Rose-500 hover:text-red hover:bg-red p-1 rounded-full hover:bg-opacity-25
+                transition-all duration-100 ease-in-out"
                 onClick={() => {
                   setOpenModal(true);
                 }}
