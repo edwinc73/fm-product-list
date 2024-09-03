@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { formatPrice, getCartItem, isInCart } from "../../utils";
 import { MenuImage } from "./MenuImage";
 import { CartContext } from "../../context/CartContext";
+import PropTypes from "prop-types";
 
 export const MenuItem = ({ item }) => {
   const { cart, dispatch } = useContext(CartContext);
@@ -16,6 +17,7 @@ export const MenuItem = ({ item }) => {
 
   useEffect(() => {
     setSelect(alreadyInCart);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart]);
 
   const handleClick = () => {
@@ -37,7 +39,7 @@ export const MenuItem = ({ item }) => {
   };
 
   return (
-    <div className="" onClick={!select ? handleClick : null}>
+    <div className="group" onClick={!select ? handleClick : null}>
       <MenuImage
         image={image}
         name={name}
@@ -45,11 +47,21 @@ export const MenuItem = ({ item }) => {
         handleDecrement={handleDecrement}
         handleIncrement={handleIcrement}
       />
-      <div className="menuItem__description font-red-hat mt-7">
-        <div className="">{category}</div>
-        <div className="text-lg font-semibold">{name}</div>
+      <div className="menuItem__description font-red-hat mt-7 text-Rose-900">
+        <div className="text-Rose-400 text-sm font-medium">{category}</div>
+        <div className="font-med text-Rose-900 font-semibold">{name}</div>
         <div className="text-red font-bold"> ${formatPrice(price)}</div>
       </div>
     </div>
   );
+};
+
+MenuItem.propTypes = {
+  item: PropTypes.shape({
+    category: PropTypes.string,
+    image: PropTypes.object,
+    name: PropTypes.string,
+    quantity: PropTypes.number,
+    price: PropTypes.number,
+  }),
 };

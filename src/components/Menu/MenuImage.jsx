@@ -9,7 +9,7 @@ export const MenuImage = ({
   handleDecrement,
 }) => {
   return (
-    <div className="menu__image relative">
+    <div className="menu__image relative group-hover:ring-opacity-50 rounded-lg ring-2 ring-red ring-opacity-0 cursor-pointer">
       <picture>
         <source
           sizes="(max-width: 300px) 300px, (max-width: 768px) 768px, 1280px"

@@ -5,3 +5,10 @@ html {
   background: hsl(20, 50%, 98%);
   min-width: 100vw;
 }
+
+.red-filter {
+  &:hover {
+    filter: brightness(0) saturate(100%) invert(23%) sepia(91%) saturate(3872%)
+      hue-rotate(12deg) brightness(89%) contrast(88%);
+  }
+}
