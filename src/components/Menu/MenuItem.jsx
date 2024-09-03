@@ -39,7 +39,7 @@ export const MenuItem = ({ item }) => {
   };
 
   return (
-    <div className="group" onClick={!select ? handleClick : null}>
+    <button className="group text-left" onClick={!select ? handleClick : null}>
       <MenuImage
         image={image}
         name={name}
@@ -48,11 +48,11 @@ export const MenuItem = ({ item }) => {
         handleIncrement={handleIcrement}
       />
       <div className="menuItem__description font-red-hat mt-7 text-Rose-900">
-        <div className="text-Rose-400 text-sm font-medium">{category}</div>
+        <div className="text-Rose-500 text-sm font-medium">{category}</div>
         <div className="font-med text-Rose-900 font-semibold">{name}</div>
         <div className="text-red font-bold"> ${formatPrice(price)}</div>
       </div>
-    </div>
+    </button>
   );
 };
 

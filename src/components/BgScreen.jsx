@@ -4,6 +4,8 @@ export const BgScreen = ({ children, setShow }) => {
   return (
     <div
       className="fixed bg-black bg-opacity-50 text-Rose-900 top-0 left-0 w-screen h-screen"
+      aria-modal="true"
+      role="alertdialog"
       onClick={() => {
         setShow(false);
       }}

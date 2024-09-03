@@ -15,6 +15,7 @@ export const MenuImage = ({
           sizes="(max-width: 300px) 300px, (max-width: 768px) 768px, 1280px"
           srcSet={`${image.mobile} 654w, ${image.tablet} 768w, ${image.desktop} 1280w`}
           type="image/jpeg"
+          loading="lazy"
         />
         <img
           src={image.thumbnail}

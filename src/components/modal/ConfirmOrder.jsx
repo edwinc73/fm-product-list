@@ -9,17 +9,27 @@ const ConfirmOrder = () => {
   const { confirmOrder, setConfirmOrder } = useContext(CartContext);
   return (
     <BgScreen setShow={setConfirmOrder}>
-      <dialog
+      <div
+        role="dialog"
         open={confirmOrder}
+        aria-labelledby="dialog-ref"
+        aria-modal="true"
+        aria-describedby="dialog-desc"
         className="fixed right-1/2 bottom-0 translate-x-1/2 md:bottom-1/2 md:translate-y-1/2 w-full md:max-w-xl bg-white px-6 py-10 rounded-t-2xl  md:rounded-b-2xl font-red-hat"
       >
         <div className="flex flex-col gap-6">
           <img src={successIcon} className="w-[3.2rem]" alt="order success" />
           <div className="confirmOrder__title">
-            <div className="menu__header text-[2.75rem] font-red-hat font-bold leading-[1.15]">
+            <div
+              className="menu__header text-[2.75rem] font-red-hat font-bold leading-[1.15]"
+              id="dialog-ref"
+            >
               Order Confirmed
             </div>
-            <div className="text-lg text-Rose-400 font-normal tracking-[-0.015rem] mt-1">
+            <div
+              className="text-lg text-Rose-400 font-normal tracking-[-0.015rem] mt-1"
+              id="dialog-desc"
+            >
               We hope you enjoy your food!
             </div>
           </div>
@@ -30,7 +40,7 @@ const ConfirmOrder = () => {
             Start New Order
           </CtaButton>
         </div>
-      </dialog>
+      </div>
     </BgScreen>
   );
 };
