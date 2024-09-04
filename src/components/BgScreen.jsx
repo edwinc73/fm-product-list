@@ -7,7 +7,7 @@ export const BgScreen = ({ children, setShow }) => {
       aria-modal="true"
       role="alertdialog"
       onClick={() => {
-        setShow(false);
+        setShow && setShow(false);
       }}
     >
       {children}
