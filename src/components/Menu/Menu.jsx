@@ -3,7 +3,10 @@ import { MenuItem } from "./MenuItem";
 
 function Menu() {
   return (
-    <div className="p-6 flex flex-col gap-8 text-Rose-900 md:w-2/3">
+    <section
+      aria-label="Desserts menu"
+      className="p-6 flex flex-col gap-8 text-Rose-900 md:w-2/3"
+    >
       <div className="menu__header text-[2.75rem] font-red-hat font-bold ">
         Desserts
       </div>
@@ -12,7 +15,7 @@ function Menu() {
           <MenuItem key={item.name} item={item} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

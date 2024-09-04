@@ -1,14 +1,18 @@
 import { BgScreen } from "../BgScreen";
 
 export const Modal = ({ action, show, setShow }) => {
+  const onOpen = (e) => {
+    e.preventFocus = true;
+  };
   return (
     <BgScreen>
-      <div
+      <dialog
         role="alert"
         aria-live="assertive"
         aria-describedby="modal-alert"
         open={show}
-        className="fixed p-4 rounded-xl top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-Rose-50 text-Rose-900"
+        autoFocus={show}
+        className="fixed p-4 rounded-xl top-1/2 -translate-y-1/2 bg-Rose-50 text-Rose-900"
       >
         <div
           className="w-full text-2xl font-red-hat font-medium text-center"
@@ -37,7 +41,7 @@ export const Modal = ({ action, show, setShow }) => {
             Cancel
           </button>
         </div>
-      </div>
+      </dialog>
     </BgScreen>
   );
 };
