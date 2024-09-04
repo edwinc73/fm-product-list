@@ -20,20 +20,16 @@ export const ImageButton = ({
       {!select ? (
         <button
           className={cx(
-            "absolute bottom-0 right-1/2 translate-x-1/2 translate-y-1/2 px-6 py-3 md:py-[0.6rem] rounded-full border border-Rose-900 gap-2 w-40 transition-all duration-100 ease-in-out group-hover:border-red group-hover:text-red group-hover:border-opacity-75 bg-white border-opacity-50 "
+            "absolute bottom-0 right-1/2 translate-x-1/2 translate-y-1/2 px-6 py-3 md:py-[0.6rem] rounded-full border border-Rose-900 gap-2 w-40 transition-all duration-100 ease-in-out group-hover:border-red group-hover:text-red group-hover:border-opacity-75 bg-white border-opacity-50 flex justify-center items-center gap-2 "
           )}
         >
           {/* closed */}
-          <div className="flex justify-center items-center gap-2">
-            <img
-              src={cartIcon}
-              className="w-[1.4rem] h-[1.4rem] md:w-[1.3rem] md:h-[1.3rem]"
-              alt="cart"
-            />
-            <span className="font-red-hat font-medium min-w-fit">
-              Add to Cart
-            </span>
-          </div>
+          <img
+            src={cartIcon}
+            className="w-[1.4rem] h-[1.4rem] md:w-[1.3rem] md:h-[1.3rem]"
+            alt="cart"
+          />
+          <p className="font-red-hat font-medium min-w-fit">Add to Cart</p>
         </button>
       ) : (
         <div className="absolute bottom-0 flex justify-between items-center right-1/2 translate-x-1/2 translate-y-1/2 px-6 py-3 md:py-[0.6rem] rounded-full border border-Rose-900 gap-2 w-40 transition-all duration-100 ease-in-out group-hover:border-red group-hover:text-red group-hover:border-opacity-75 bg-red text-white border-opacity-0 ">
