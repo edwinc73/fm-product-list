@@ -39,7 +39,7 @@ export const MenuItem = ({ item }) => {
   };
 
   return (
-    <button className="group text-left" onClick={!select ? handleClick : null}>
+    <div className="group text-left" onClick={!select ? handleClick : null}>
       <MenuImage
         image={image}
         name={name}
@@ -52,7 +52,7 @@ export const MenuItem = ({ item }) => {
         <div className="font-med text-Rose-900 font-semibold">{name}</div>
         <div className="text-red font-bold"> ${formatPrice(price)}</div>
       </div>
-    </button>
+    </div>
   );
 };
 

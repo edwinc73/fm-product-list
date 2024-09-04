@@ -23,7 +23,7 @@ export const CtaButton = ({ setConfirmOrder, children, type }) => {
       onClick={handleClick}
     >
       {isLoading ? (
-        <PropagateLoader color="#ffffff" size={8} />
+        <PropagateLoader color="#ffffff" size={8} className="mb-2" />
       ) : (
         <>{children}</>
       )}

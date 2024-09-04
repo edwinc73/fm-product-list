@@ -28,10 +28,6 @@ function Fab() {
     };
   }, []);
 
-  useEffect(() => {
-    console.log(showFab);
-  }, [showFab]);
-
   return (
     <>
       <AnimatePresence>

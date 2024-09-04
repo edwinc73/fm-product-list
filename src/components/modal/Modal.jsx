@@ -7,7 +7,7 @@ export const Modal = ({ action, show, setShow }) => {
         role="alert"
         aria-describedby="modal-alert"
         open={show}
-        className="fixed p-4 rounded-xl top-1/2 -translate-y-1/2 md:left-1/2 md:-translate-x-1/2 bg-Rose-50 text-Rose-900"
+        className="fixed p-4 rounded-xl top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-Rose-50 text-Rose-900"
       >
         <div
           className="w-full text-2xl font-red-hat font-medium text-center"
