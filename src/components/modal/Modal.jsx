@@ -5,6 +5,7 @@ export const Modal = ({ action, show, setShow }) => {
     <BgScreen>
       <div
         role="alert"
+        aria-live="assertive"
         aria-describedby="modal-alert"
         open={show}
         className="fixed p-4 rounded-xl top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-Rose-50 text-Rose-900"
